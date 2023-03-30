@@ -5,16 +5,3 @@ curl -X POST \
 
 
 
-
-token 5933970657:AAG6-WwH6VAjMg1FYDVDEtTlP1ICQD3Rb7U
-chat id -1001801238524
-
-curl https://api.telegram.org/bot5933970657:AAG6-WwH6VAjMg1FYDVDEtTlP1ICQD3Rb7U/getUpdates | jq .message.chat.id
-
-curl -X POST -H 'Content-Type: application/json' -d '{"chat_id": "-1001801238524", "text": "This is a test from qa.guru", "disable_notification": true}' https://api.telegram.org/bot5933970657:AAG6-WwH6VAjMg1FYDVDEtTlP1ICQD3Rb7U/sendMessage
-
-
-
-java "-DconfigFile=notifications/config.json" -jar notifications/allure-notifications-4.2.1.jar
-
-
